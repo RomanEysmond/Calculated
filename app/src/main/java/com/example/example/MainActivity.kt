@@ -48,7 +48,10 @@ class MainActivity : AppCompatActivity() {
     private val archiveList = mutableListOf<ArchiveEntry>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportRequestWindowFeature(android.view.Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+
         setContentView(R.layout.activity_main)
 
         leftTable = findViewById(R.id.tableLeft)
